@@ -1,0 +1,10 @@
+<div *ngIf="!productoService.cargando" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+
+    <a *ngFor="let _productos of productoService.productosFiltrado" [routerLink]="['/item',_productos.cod]" class=" animated fadeIn rk-item ae-masonry__item">
+        <img src="assets/productos/{{_productos.url}}.jpg" alt="">
+        <div class="item-meta">
+            <h2>{{_productos.titulo}}</h2>
+            <p>{{_productos.categoria}}</p>
+        </div>
+    </a>
+</div>
